@@ -1,0 +1,104 @@
+body{
+    background-color: teal;
+}
+
+/* label color */
+.input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #000;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field{
+    color: #000;
+  }
+
+  #container{
+      margin-left: 35%;
+      margin-right: 35%;
+      margin-top: 100px;
+      width: 60em;
+  }
+
+  #centered{
+      margin-left: 8%;
+      margin-top: 0;
+  }
+
+  .btn{
+      margin-top: 20px;
+      margin-left: 66%;
+  }
+
+  h4{
+      text-align: center;
+      color: #757575;
+  }
+
+  .material-icons{
+    color: #757575;
+  }
+
+  #error{
+    color: red;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #container{
+      margin-left: 30%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #container{
+      margin-left: 25%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    #container{
+      margin-left: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #container{
+      margin-left: 15%;
+      width: 400px;
+    }
+  }
+
+  @media only screen and (max-width: 570px) {
+    #container{
+      margin-left: 8%;
+    }
+  }
+
+  #register{
+    margin-left: 50px;
+    color: grey;
+  }
+
+  #register a{
+    color: red;
+  }

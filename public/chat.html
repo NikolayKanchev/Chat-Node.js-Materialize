@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/chat.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div id="containers">
+        <div class="container" id="users-container">
+            <div id="users-container-small">
+                <!-- <div id="new-user">
+                    <div id="nick-name">NK</div> 
+                    <div id="name">Nikolay Kanchev</div>
+                    <div id="activ"></div>
+                </div> -->
+            </div>
+        </div>
+        <div class="container" id="messages-container">
+            <div id="chat-area">
+                <!-- <div id="message">
+                    <div id="nick-name">NK</div>
+                    <div>
+                        <div id="text">Lorem ipsum dolor</div>
+                        <div id="time">55:55:55/22.5.5555</div>
+                    </div>
+                </div> -->
+                <!-- <div id="self-message">
+                    <div id="nick-name">Me</div>
+                    <div id="text">Lorem ipsum dolor sit amet consectetur</div>
+                    <div id="time">55:55:55/22.5.5555</div>
+                </div> -->
+            </div>
+            <textarea id="new-message-container"></textarea>
+        </div>
+        <div class="container" id="username">
+            <div id="letters"></div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

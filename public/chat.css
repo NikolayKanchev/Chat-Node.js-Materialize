@@ -1,0 +1,258 @@
+body{
+    background-color: teal;
+}
+
+#containers{
+    display: flex;
+    margin: 30px;
+    margin-right: 10px;
+}
+
+#users-container, #messages-container{
+    background: white;
+    border-radius: 10px;
+}
+
+#users-container{
+    width: 20%;
+    height: 680px;
+    margin-right: 0px;
+}
+
+#messages-container{
+    width: 55%;
+    height: 600px;
+    margin-right: 5%;
+}
+
+#new-message-container{
+    background-color: #E0F2F1;
+    opacity: 0.9;
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#new-message-container:focus{
+    background-color: white;
+    color: black;
+    border: 1px solid #004D40;
+}
+
+#username{
+    width: 60px;
+    height: 60px;
+    margin-right: 0px;
+    margin-left: 10px;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+#letters{
+    color: white;
+    font-weight: 900;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#chat-area{
+    height: 500px;
+    overflow: hidden;
+    overflow:scroll;
+    border-radius: 10px;
+    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #B2DFDB;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#message{
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#name{
+    width: 115px;
+}
+
+#nick-name{
+    width: 45px;
+    height: 45px;
+    background-color: #424242;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px;
+    text-align: center;
+}
+
+#text{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 300px;
+    display: flex;
+    overflow: auto;
+    background-color: #616161;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+#time{
+    color: black;
+    font-size: 10px;
+    margin-left: 60%;
+    margin-bottom: 10px;
+}
+
+#self-message{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-right: 30px;
+}
+
+#self-message #nick-name{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+#self-message #text{
+    background-color: white;
+    color: grey;
+}
+
+#users-container-small{
+    margin: 30px;
+    margin-top: 45px;
+    border-radius: 10px;
+    width: 80%;
+    height: 590px;
+    background-color: #B2DFDB;
+    overflow: hidden;
+    overflow:scroll;
+}
+
+#new-user{
+    display: flex;
+}
+
+#new-user #nick-name{
+    font-size: 10px;
+    padding: 1px;
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 9px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#new-user #name{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#new-user #activ{
+    width: 8px;
+    height: 8px;
+    background-color: springgreen;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+#new-user #nick-name{
+    padding-left: 2px;
+    text-align: center;
+}
+
+#left{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1300px) {
+    #text{
+        width: 10em;
+    }
+
+    #time{
+        margin-left: 5em;
+    }
+    
+    #users-container{
+        width: 250px;
+    }
+   
+    #username{
+        margin:0;
+    }
+    #messages-container{
+        margin-right: 0;
+    }
+
+    #users-container-small{
+        margin-left: 10%;
+    }
+
+    #chat-area{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #text{
+        width: 10em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #chat-area{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #username{
+        width: 40px;
+        height: 40px;
+        margin-left: 85%;
+        position: absolute;
+        padding-top: 0;
+        margin-top: 2px;
+    }
+
+    #containers{
+        margin-left: 2%;
+        margin-right: 5%;
+    }
+
+    #letters{
+        font-size: 14px;
+    }
+
+    #time{
+        margin-left: 10%;
+    }
+}
