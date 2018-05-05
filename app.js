@@ -293,38 +293,3 @@ server.listen('3000', function(err){
 });
 
 module.exports = app;
-
-
-// module.exports = {
-//     saveNewMessage: function(data) {
-//         // socket.on("new message", function(data) {                  
-//             let userId = data.userId;
-//             let username = data.username;
-//             let newMessage = data.message;
-//             let date = data.date;
-//             let response = {};
-
-//             //save the message to the DB
-        
-//            db.Message.query().insert({
-//                 "user_id": userId,
-//                 "username": username,
-//                 "text": newMessage,
-//                 "created_at": date
-//             }).then(persistedMessage => {
-//                 response.status = 200;
-//                 response.message = "Error querying the database. Might be an error with the config or the server hosting the database is down.";
-//                 // send to all except the client itself
-//                 // socket.broadcast.emit("broadcasted message", {"data": data});
-//             }).catch(err => {
-//                 response.status = 500;
-//                 response.error = err;
-//                 response.message = "Error querying the database. Might be an error with the config or the server hosting the database is down.";
-//                 console.log(response); 
-//             });
-//             console.log(response);
-            
-//             return response.status;
-//         // });
-//     }
-// }

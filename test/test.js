@@ -81,14 +81,5 @@ describe('Database interaction', function(){
         done();
         });
     });
-
 });
 
-// describe("DB - save new message", function() {
-//     it("should return 200 if the message is saved successfully", function() {
-//         let date = new Date(Date.now());
-//         let data = {"userId": 52, "username": "NK","message": "The test is working", "date": date.toLocaleString()};
-//         let result = main.saveNewMessage(data);
-//         assert.equal(result, 200);
-//     });
-// });
