@@ -114,10 +114,12 @@ if(username === null || userId === null){
             let message ="<div id='left'>"+ username +" - left the chatroom !!!</div>";
             $("#chat-area").append(message);
             //updates the users
-            socket.emit("get users");
+            setTimeout(() => {
+                socket.emit("get users");
+            }, 1000);
             //Starts the scrollbar at the bottom
             $("#chat-area").scrollTop($("#chat-area")[0].scrollHeight);
-        })
+        });
 
         socket.on("Registration success", function(data){
 
