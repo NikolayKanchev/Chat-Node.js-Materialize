@@ -69,9 +69,7 @@ app.post("/updateActive", function(req, res){
                 }).then(()=> {
                     response.status = 200;
                     response.message = "User status updated successfully !"
-                    console.log(response);
-
-                    // The test should be here maybe
+                    res.send(response);                   
                 });
             } else{
                 response.message = "Can't find the user !";
@@ -89,7 +87,6 @@ app.post("/sign-in", function(req, res){
     let email = req.body.email;
     let password = req.body.password;
 
-    // *****************************************************************
     let response = {};
 
     db.User.query().select().where({
@@ -219,9 +216,8 @@ io.on("connection", function(socket) {
                clearInterval(this);
            }
     }, 3000);
-    
 
-    socket.on("get users", function(data) {         
+    socket.on("get users", function(data) {
         db.User.query().select()
         .then(foundUsers => {
             // send to all
@@ -296,3 +292,39 @@ server.listen('3000', function(err){
     }
 });
 
+module.exports = app;
+
+
+// module.exports = {
+//     saveNewMessage: function(data) {
+//         // socket.on("new message", function(data) {                  
+//             let userId = data.userId;
+//             let username = data.username;
+//             let newMessage = data.message;
+//             let date = data.date;
+//             let response = {};
+
+//             //save the message to the DB
+        
+//            db.Message.query().insert({
+//                 "user_id": userId,
+//                 "username": username,
+//                 "text": newMessage,
+//                 "created_at": date
+//             }).then(persistedMessage => {
+//                 response.status = 200;
+//                 response.message = "Error querying the database. Might be an error with the config or the server hosting the database is down.";
+//                 // send to all except the client itself
+//                 // socket.broadcast.emit("broadcasted message", {"data": data});
+//             }).catch(err => {
+//                 response.status = 500;
+//                 response.error = err;
+//                 response.message = "Error querying the database. Might be an error with the config or the server hosting the database is down.";
+//                 console.log(response); 
+//             });
+//             console.log(response);
+            
+//             return response.status;
+//         // });
+//     }
+// }

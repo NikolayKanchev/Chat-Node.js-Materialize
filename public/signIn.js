@@ -34,7 +34,9 @@ $(document).ready(function(){
                 
                 if (status === 200){
                     $.post("updateActive", { userId: userId, isActive: active });
-                    sessionStorage.setItem("username", username);                
+                    sessionStorage.setItem("username", username);
+                    sessionStorage.setItem("message", "");
+                    sessionStorage.setItem("email", "");               
                     sessionStorage.setItem("userId", userId);                
                     $(location).attr('href','http://localhost:3000/chat');
                 }else{

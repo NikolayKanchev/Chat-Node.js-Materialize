@@ -9,7 +9,9 @@ if(username === null || userId === null){
     let socket = io.connect("http://localhost:3000");
 
     if(sessionStorage.message === "The user was registered successfully !"){
+        console.log(sessionStorage.message);
         socket.emit("Send registration confirmation e-mail", {'email': sessionStorage.email});
+
     }
 
     socket.emit("get users");
@@ -115,7 +117,7 @@ if(username === null || userId === null){
             socket.emit("get users");
             //Starts the scrollbar at the bottom
             $("#chat-area").scrollTop($("#chat-area")[0].scrollHeight);
-        });
+        })
 
         socket.on("Registration success", function(data){
 
